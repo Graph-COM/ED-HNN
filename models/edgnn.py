@@ -20,7 +20,7 @@ class EquivSetConv(nn.Module):
             self.W1 = MLP(in_features, out_features, out_features, mlp1_layers,
                 dropout=dropout, Normalization=normalization, InputNorm=input_norm)
         else:
-            self.W = nn.Identity()
+            self.W1 = nn.Identity()
 
         if mlp2_layers > 0:
             self.W2 = MLP(in_features+out_features, out_features, out_features, mlp2_layers,

@@ -318,7 +318,7 @@ class SetGNN(nn.Module):
                                              dropout=self.dropout,
                                              Normalization=self.NormLayer,
                                              InputNorm=self.InputNorm,
-                                             heads=args.num_heads,
+                                             heads=args.AllSet_num_heads,
                                              attention=args.AllSet_PMA))
             self.bnV2Es.append(nn.BatchNorm1d(args.MLP_hidden))
             self.E2VConvs.append(HalfNLHconv(in_dim=args.MLP_hidden,
@@ -328,7 +328,7 @@ class SetGNN(nn.Module):
                                              dropout=self.dropout,
                                              Normalization=self.NormLayer,
                                              InputNorm=self.InputNorm,
-                                             heads=args.num_heads,
+                                             heads=args.AllSet_num_heads,
                                              attention=args.AllSet_PMA))
             self.bnE2Vs.append(nn.BatchNorm1d(args.MLP_hidden))
             for _ in range(self.All_num_layers-1):
@@ -339,7 +339,7 @@ class SetGNN(nn.Module):
                                                  dropout=self.dropout,
                                                  Normalization=self.NormLayer,
                                                  InputNorm=self.InputNorm,
-                                                 heads=args.num_heads,
+                                                 heads=args.AllSet_num_heads,
                                                  attention=args.AllSet_PMA))
                 self.bnV2Es.append(nn.BatchNorm1d(args.MLP_hidden))
                 self.E2VConvs.append(HalfNLHconv(in_dim=args.MLP_hidden,
@@ -349,7 +349,7 @@ class SetGNN(nn.Module):
                                                  dropout=self.dropout,
                                                  Normalization=self.NormLayer,
                                                  InputNorm=self.InputNorm,
-                                                 heads=args.num_heads,
+                                                 heads=args.AllSet_num_heads,
                                                  attention=args.AllSet_PMA))
                 self.bnE2Vs.append(nn.BatchNorm1d(args.MLP_hidden))
             if self.GPR:

@@ -98,8 +98,6 @@ def main(args):
         model = UniGCNII(data.num_features, data.num_classes, args)
     elif args.method == 'EDGNN':
         model = EquivSetGNN(data.num_features, data.num_classes, args)
-    elif args.method == 'EDGNNII':
-        model = EquivSetGNNII(data.num_features, data.num_classes, args)
     else:
         raise ValueError(f'Undefined model name: {args.method}')
     model = model.to(device)
@@ -188,7 +186,6 @@ if __name__ == '__main__':
     parser.add_argument('--aggregate', default='mean', choices=['sum', 'mean'])
     parser.add_argument('--normalization', default='ln', choices=['bn','ln','None'])
     parser.add_argument('--activation', default='relu', choices=['Id','relu', 'prelu'])
-    parser.add_argument('--num_heads', default=1, type=int)
     
     # Args for EDGNN
     parser.add_argument('--MLP2_num_layers', default=-1, type=int, help='layer number of mlp2')
@@ -201,6 +198,7 @@ if __name__ == '__main__':
     parser.add_argument('--AllSet_GPR', action='store_false')  # skip all but last dec
     parser.add_argument('--AllSet_LearnMask', action='store_false')
     parser.add_argument('--AllSet_PMA', action='store_true')
+    parser.add_argument('--AllSet_num_heads', default=1, type=int)
     # Args for CEGAT
     parser.add_argument('--output_heads', default=1, type=int)  # Placeholder
     # Args for HyperGCN
