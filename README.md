@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-The official implementation of paper "Equivariant Hypergraph Diffusion Neural Operators".
+The official implementation of paper [Equivariant Hypergraph Diffusion Neural Operators](https://arxiv.org/abs/2207.06680).
 
 Peihao Wang, Shenghao Yang, Yunyu Liu, Zhangyang (Atlas) Wang, Pan Li
 
@@ -157,4 +157,10 @@ python train.py --method EDGNN --dname house-committees-100 --All_num_layers 8 -
 This repository is build based on AllSet [official repository](https://github.com/jianhao2016/AllSet).
 If you find this work or our code implementation helpful for your own resarch or work, please cite our paper.
 ```
+@article{wang2022equivariant,
+  title={Equivariant Hypergraph Diffusion Neural Operators},
+  author={Wang, Peihao and Yang, Shenghao and Liu, Yunyu and Wang, Zhangyang and Li, Pan},
+  journal={arXiv preprint arXiv:2207.06680},
+  year={2022}
+}
 ```
