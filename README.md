@@ -92,7 +92,7 @@ python train.py --method EDGNN --dname citeseer --All_num_layers 1 --MLP_num_lay
 ```
 python train.py --method EDGNN --dname pubmed --All_num_layers 8 --MLP_num_layers 2 --MLP2_num_layers 2
 --MLP3_num_layers 2 --Classifier_num_layers 2 --MLP_hidden 512 --Classifier_hidden 256 --normalization None --aggregate mean
---restart_alpha 0.5 --lr 0.001 --wd 0 --epochs 500 --runs 10s
+--restart_alpha 0.5 --lr 0.001 --wd 0 --epochs 500 --runs 10
 --cuda <cuda_id> --data_dir <data_path> --raw_data_dir <raw_data_path>
 ```
 
