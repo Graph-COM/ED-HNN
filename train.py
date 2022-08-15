@@ -14,7 +14,7 @@ import torch_geometric
 from tqdm import tqdm
 
 from models import SetGNN, HCHA, HNHN, HyperGCN, HyperSAGE, \
-    LEGCN, UniGCNII, EquivSetGNN
+    LEGCN, UniGCNII, HyperND, EquivSetGNN
 
 import datasets
 import utils
@@ -96,6 +96,8 @@ def main(args):
         model = LEGCN(data.num_features, data.num_classes, args)
     elif args.method == 'UniGCNII':
         model = UniGCNII(data.num_features, data.num_classes, args)
+    elif args.method == 'HyperND':
+        model = HyperND(data.num_features, data.num_classes, args)
     elif args.method == 'EDGNN':
         model = EquivSetGNN(data.num_features, data.num_classes, args)
     else:
@@ -217,6 +219,10 @@ if __name__ == '__main__':
     parser.add_argument('--UniGNN_use_norm', action="store_true", help='use norm in the final layer')
     parser.add_argument('--UniGNN_degV', default = 0)
     parser.add_argument('--UniGNN_degE', default = 0)
+    # Args for HyperND
+    parser.add_argument('--HyperND_ord', default = 1., type=float)
+    parser.add_argument('--HyperND_tol', default = 1e-4, type=float)
+    parser.add_argument('--HyperND_steps', default = 100, type=int)
 
     parser.set_defaults(add_self_loop=True)
     parser.set_defaults(exclude_self=False)
