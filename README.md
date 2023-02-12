@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-The official implementation of paper [Equivariant Hypergraph Diffusion Neural Operators](https://arxiv.org/abs/2207.06680).
+The official implementation of ICLR 2023 paper [Equivariant Hypergraph Diffusion Neural Operators](https://arxiv.org/abs/2207.06680).
 
 Peihao Wang, Shenghao Yang, Yunyu Liu, Zhangyang (Atlas) Wang, Pan Li
 
