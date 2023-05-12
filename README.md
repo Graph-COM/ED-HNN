@@ -157,10 +157,10 @@ python train.py --method EDGNN --dname house-committees-100 --All_num_layers 8 -
 This repository is build based on AllSet [official repository](https://github.com/jianhao2016/AllSet).
 If you find this work or our code implementation helpful for your own resarch or work, please cite our paper.
 ```
-@article{wang2022equivariant,
+@inproceedings{wang2022equivariant,
   title={Equivariant Hypergraph Diffusion Neural Operators},
   author={Wang, Peihao and Yang, Shenghao and Liu, Yunyu and Wang, Zhangyang and Li, Pan},
-  journal={arXiv preprint arXiv:2207.06680},
-  year={2022}
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2023}
 }
 ```
