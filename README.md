@@ -30,7 +30,7 @@ torch-cluster
 ### Data Preparation
 
 Download our preprocessed dataset from the [HuggingFace Hub](https://huggingface.co/datasets/peihaowang/edgnn-hypergraph-dataset).
-Then extract the downloaded package into the root folder of the repository. The directory structure should look like:
+Then put the downloaded directory under the root folder of this repository. The directory structure should look like:
 ```
 ED-HNN/
   <source code files>
