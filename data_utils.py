@@ -21,9 +21,7 @@ def load_LE_dataset(path, dataset):
     p2idx_features_labels = os.path.join(path, file_name)
     idx_features_labels = np.genfromtxt(p2idx_features_labels,
                                         dtype=np.dtype(str))
-    # features = np.array(idx_features_labels[:, 1:-1])
     features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
-#     labels = encode_onehot(idx_features_labels[:, -1])
     labels = torch.LongTensor(idx_features_labels[:, -1].astype(float))
 
 
@@ -309,7 +307,6 @@ def load_cornell_dataset(path, dataset, feature_noise = 0.1, feature_dim = None)
                 y = labels)
     assert data.y.min().item() == 0
 
-    # data.coalesce()
     # There might be errors if edge_index.max() != num_nodes.
     # used user function to override the default function.
     # the following will also sort the edge_index and remove duplicates. 
